@@ -1,0 +1,18 @@
+[package]
+name = "use-oci-platform"
+description = "OCI platform primitives for operating systems, architectures, variants, and platform rendering."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci-platform"
+keywords = ["oci", "containers", "primitive", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[lints]
+workspace = true

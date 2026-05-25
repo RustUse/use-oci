@@ -1,0 +1,22 @@
+[package]
+name = "use-oci-config"
+description = "OCI image config primitives for users, env, command metadata, ports, labels, volumes, and annotations."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci-config"
+keywords = ["oci", "containers", "primitive", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[dependencies]
+use-oci-annotation = { workspace = true }
+use-oci-platform = { workspace = true }
+
+[lints]
+workspace = true

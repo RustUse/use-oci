@@ -1,0 +1,23 @@
+[package]
+name = "use-oci-reference"
+description = "OCI image reference syntax primitives for names, tags, digests, and canonical references."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci-reference"
+keywords = ["oci", "containers", "primitive", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[dependencies]
+use-oci-digest = { workspace = true }
+use-oci-distribution = { workspace = true }
+use-oci-tag = { workspace = true }
+
+[lints]
+workspace = true

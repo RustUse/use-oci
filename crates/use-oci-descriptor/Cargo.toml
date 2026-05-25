@@ -1,0 +1,24 @@
+[package]
+name = "use-oci-descriptor"
+description = "OCI descriptor primitives for media type, digest, size, URLs, annotations, data, artifacts, and platform metadata."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci-descriptor"
+keywords = ["oci", "containers", "primitive", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[dependencies]
+use-oci-annotation = { workspace = true }
+use-oci-digest = { workspace = true }
+use-oci-media-type = { workspace = true }
+use-oci-platform = { workspace = true }
+
+[lints]
+workspace = true

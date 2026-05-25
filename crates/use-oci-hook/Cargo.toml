@@ -1,0 +1,18 @@
+[package]
+name = "use-oci-hook"
+description = "OCI runtime hook primitives for lifecycle phases, paths, args, env, and timeout metadata."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci-hook"
+keywords = ["oci", "containers", "primitive", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[lints]
+workspace = true

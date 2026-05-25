@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cargo: check workspace",
+      "type": "shell",
+      "command": "cargo xcheck",
+      "problemMatcher": "$rustc",
+      "group": "build"
+    },
+    {
+      "label": "cargo: test workspace",
+      "type": "shell",
+      "command": "cargo xtest",
+      "problemMatcher": "$rustc",
+      "group": "test"
+    },
+    {
+      "label": "cargo: clippy workspace",
+      "type": "shell",
+      "command": "cargo xlint",
+      "problemMatcher": "$rustc"
+    }
+  ]
+}

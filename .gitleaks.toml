@@ -1,0 +1,6 @@
+title = "RustUse Gitleaks configuration"
+
+[extend]
+useDefault = true
+
+# Keep allowlists narrow and reviewed.

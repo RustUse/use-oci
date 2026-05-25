@@ -1,0 +1,135 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-oci-digest"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-media-type"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-annotation"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-platform"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-tag"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-namespace"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-hook"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-descriptor"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-layer"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-manifest"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-index"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-distribution"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-reference"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-config"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-layout"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-runtime"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci-image"
+release = true
+version_group = "rustuse-oci"
+
+[[package]]
+name = "use-oci"
+release = true
+version_group = "rustuse-oci"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+    "use-oci-digest",
+    "use-oci-media-type",
+    "use-oci-annotation",
+    "use-oci-platform",
+    "use-oci-tag",
+    "use-oci-namespace",
+    "use-oci-hook",
+    "use-oci-descriptor",
+    "use-oci-layer",
+    "use-oci-manifest",
+    "use-oci-index",
+    "use-oci-distribution",
+    "use-oci-reference",
+    "use-oci-config",
+    "use-oci-layout",
+    "use-oci-runtime",
+    "use-oci-image",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+    { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+    { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+    { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+    { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+    { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+    { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+    { footer = "^changelog: ?ignore$", skip = true },
+    { message = "^.*", group = "Changed" },
+]

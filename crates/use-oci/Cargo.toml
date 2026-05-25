@@ -1,0 +1,89 @@
+[package]
+name = "use-oci"
+description = "Feature-gated facade crate for RustUse OCI primitives"
+publish = true
+autoexamples = false
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci"
+keywords = ["oci", "containers", "facade", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = ["full"]
+annotation = ["dep:use-oci-annotation"]
+config = ["dep:use-oci-config"]
+descriptor = ["dep:use-oci-descriptor"]
+digest = ["dep:use-oci-digest"]
+distribution = ["dep:use-oci-distribution"]
+hook = ["dep:use-oci-hook"]
+image = ["dep:use-oci-image"]
+index = ["dep:use-oci-index"]
+layer = ["dep:use-oci-layer"]
+layout = ["dep:use-oci-layout"]
+manifest = ["dep:use-oci-manifest"]
+media-type = ["dep:use-oci-media-type"]
+namespace = ["dep:use-oci-namespace"]
+platform = ["dep:use-oci-platform"]
+reference = ["dep:use-oci-reference"]
+runtime = ["dep:use-oci-runtime"]
+tag = ["dep:use-oci-tag"]
+full = [
+    "annotation",
+    "config",
+    "descriptor",
+    "digest",
+    "distribution",
+    "hook",
+    "image",
+    "index",
+    "layer",
+    "layout",
+    "manifest",
+    "media-type",
+    "namespace",
+    "platform",
+    "reference",
+    "runtime",
+    "tag",
+]
+
+[dependencies]
+use-oci-image = { workspace = true, optional = true }
+use-oci-manifest = { workspace = true, optional = true }
+use-oci-index = { workspace = true, optional = true }
+use-oci-descriptor = { workspace = true, optional = true }
+use-oci-layer = { workspace = true, optional = true }
+use-oci-config = { workspace = true, optional = true }
+use-oci-layout = { workspace = true, optional = true }
+use-oci-annotation = { workspace = true, optional = true }
+use-oci-media-type = { workspace = true, optional = true }
+use-oci-platform = { workspace = true, optional = true }
+use-oci-digest = { workspace = true, optional = true }
+use-oci-distribution = { workspace = true, optional = true }
+use-oci-reference = { workspace = true, optional = true }
+use-oci-runtime = { workspace = true, optional = true }
+use-oci-hook = { workspace = true, optional = true }
+use-oci-namespace = { workspace = true, optional = true }
+use-oci-tag = { workspace = true, optional = true }
+
+[[test]]
+name = "facade"
+required-features = ["full"]
+
+[[example]]
+name = "oci_basic_usage"
+path = "examples/basic_usage.rs"
+required-features = ["full"]
+
+[lints]
+workspace = true

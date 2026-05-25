@@ -1,0 +1,18 @@
+[package]
+name = "use-oci-layout"
+description = "OCI image layout primitives for layout versions, blobs, index, refs, and lexical path helpers."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-oci-layout"
+keywords = ["oci", "containers", "primitive", "rustuse"]
+categories = ["data-structures", "development-tools", "parser-implementations"]
+
+[lints]
+workspace = true

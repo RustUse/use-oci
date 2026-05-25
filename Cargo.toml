@@ -1,0 +1,99 @@
+[workspace]
+members = [
+    "crates/use-oci",
+    "crates/use-oci-digest",
+    "crates/use-oci-media-type",
+    "crates/use-oci-annotation",
+    "crates/use-oci-platform",
+    "crates/use-oci-tag",
+    "crates/use-oci-namespace",
+    "crates/use-oci-hook",
+    "crates/use-oci-descriptor",
+    "crates/use-oci-layer",
+    "crates/use-oci-manifest",
+    "crates/use-oci-index",
+    "crates/use-oci-distribution",
+    "crates/use-oci-reference",
+    "crates/use-oci-config",
+    "crates/use-oci-layout",
+    "crates/use-oci-runtime",
+    "crates/use-oci-image",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+documentation = "https://rustuse.org"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-oci"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-oci = { version = "0.0.1", path = "crates/use-oci" }
+use-oci-digest = { version = "0.0.1", path = "crates/use-oci-digest" }
+use-oci-media-type = { version = "0.0.1", path = "crates/use-oci-media-type" }
+use-oci-annotation = { version = "0.0.1", path = "crates/use-oci-annotation" }
+use-oci-platform = { version = "0.0.1", path = "crates/use-oci-platform" }
+use-oci-tag = { version = "0.0.1", path = "crates/use-oci-tag" }
+use-oci-namespace = { version = "0.0.1", path = "crates/use-oci-namespace" }
+use-oci-hook = { version = "0.0.1", path = "crates/use-oci-hook" }
+use-oci-descriptor = { version = "0.0.1", path = "crates/use-oci-descriptor" }
+use-oci-layer = { version = "0.0.1", path = "crates/use-oci-layer" }
+use-oci-manifest = { version = "0.0.1", path = "crates/use-oci-manifest" }
+use-oci-index = { version = "0.0.1", path = "crates/use-oci-index" }
+use-oci-distribution = { version = "0.0.1", path = "crates/use-oci-distribution" }
+use-oci-reference = { version = "0.0.1", path = "crates/use-oci-reference" }
+use-oci-config = { version = "0.0.1", path = "crates/use-oci-config" }
+use-oci-layout = { version = "0.0.1", path = "crates/use-oci-layout" }
+use-oci-runtime = { version = "0.0.1", path = "crates/use-oci-runtime" }
+use-oci-image = { version = "0.0.1", path = "crates/use-oci-image" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+doc_markdown = "allow"
+derivable_impls = "allow"
+expect_used = "allow"
+missing_const_for_fn = "allow"
+missing_errors_doc = "allow"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+multiple_crate_versions = "allow"
+return_self_not_must_use = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-oci-digest",
+    "use-oci-media-type",
+    "use-oci-annotation",
+    "use-oci-platform",
+    "use-oci-tag",
+    "use-oci-namespace",
+    "use-oci-hook",
+    "use-oci-descriptor",
+    "use-oci-layer",
+    "use-oci-manifest",
+    "use-oci-index",
+    "use-oci-distribution",
+    "use-oci-reference",
+    "use-oci-config",
+    "use-oci-layout",
+    "use-oci-runtime",
+    "use-oci-image",
+    "use-oci",
+]
